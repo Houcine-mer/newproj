@@ -1,0 +1,177 @@
+#createTourModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show modal */
+#createTourModal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal box */
+#createTourModal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+/* Modal heading */
+#createTourModal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Form grid */
+#createTourForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 1rem;
+}
+
+/* Labels */
+#createTourForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Inputs */
+#createTourForm input[type="date"],
+#createTourForm input[type="number"] {
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#createTourForm input[type="date"]:focus,
+#createTourForm input[type="number"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+/* Buttons container */
+#createTourForm div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+#createTourForm button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* Submit button */
+#createTourForm button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#createTourForm button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Cancel button */
+#cancelCreateTour {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#cancelCreateTour:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+  /* Modal box tighter on mobile */
+  #createTourModal {
+    width : 100%;
+    justify-content: center;    /* horizontal center */
+    align-items: center;        /* vertical center */
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #createTourModal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  /* One column layout */
+  #createTourForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  /* Labels slightly smaller */
+  #createTourForm label {
+    font-size: 0.9rem;
+  }
+
+  /* Inputs more touch-friendly */
+  #createTourForm input[type="date"],
+  #createTourForm input[type="number"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+
+  /* Buttons stack */
+  #createTourForm div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #createTourForm button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}

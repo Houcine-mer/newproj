@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  <link rel="icon" href="images/simple-car-silhouette-sticker-u33a0-x450 5.png">
+  <link rel="stylesheet" href="{{ asset('css/output.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/headerStyle.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/loginsignupst.css') }}">
+</head>
+
+<body class="m-0 p-0 box-border min-h-screen overflow-x-hidden bg-white dark:bg-black">
+  <div class="header" id="headID">
+    <div class="left-side">
+      <button class="show-btn" onclick="toggleNav()" id="openID">
+        <p>&#8801;</p>
+      </button>
+      <button class="close-btn" onclick="closeAll()" id="closeID">
+        <p>X</p>
+      </button>
+    </div>
+
+    <div class="middle-side">
+      <button class="home-btn">
+        <a href="/">HOME</a>
+      </button>
+
+      <button class="about-btn">
+        <a href="/cars">CARS</a>
+      </button>
+      <button class="rev-btn">
+        <a href="/reviews">REVIEWS</a>
+      </button>
+      <button class="about-btn">
+        <a href="/about">ABOUT</a>
+      </button>
+      <button class="switch-btn" onclick="switchMode()" id="switchID">SWITCH</button>
+    </div>
+
+    <div class="right-side">
+      <button class="login-btn">
+        <a href="/login">LOGIN</a>
+      </button>
+      <button class="sign-btn">
+        <a href="/signup"> SIGN UP</a>
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="min-h-screen pt-24 pb-16 px-4 flex justify-center items-center
+           bg-[url('/images/upcoming-trends-in-the-world-of-car-dealerships.jpeg')]
+           bg-cover bg-center bg-fixed
+           dark:bg-[url('/images/mercedes-black-raobpqc23szwxs7d.jpg')]"
+  >
+    <form
+      id="signupForm"
+      action="#"
+      method="post"
+      class="w-full max-w-3xl bg-white/40 dark:bg-black/40
+             backdrop-blur-sm rounded-md shadow-md
+             flex flex-col items-center gap-3
+             px-6 sm:px-10 lg:px-20 py-4"
+    >
+      <p class="mb-[1vh] text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
+        Create your Account !
+      </p>
+
+      <div
+        id="error-message"
+        style="display: none; background-color: #fee; color: #c33; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #c33; font-size: 14px;"
+        class="w-full"
+      ></div>
+      <div
+        id="success-message"
+        style="display: none; background-color: #efe; color: #3c3; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #3c3; font-size: 14px;"
+        class="w-full"
+      ></div>
+
+      <label for="fullname" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+        Full Name
+      </label>
+      <input
+        type="text"
+        id="fullname"
+        required
+        placeholder="- Enter your Full Name -"
+        class="w-[18rem] sm:w-[22rem] h-10
+               rounded-lg border border-gray-900
+               bg-[#737070] text-sm text-center text-white
+               placeholder:text-gray-800 placeholder:italic
+               px-2.5 focus:outline-none"
+      />
+      <span id="fullnameError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+
+      <!-- Email -->
+      <label for="email" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+        E-mail Address
+      </label>
+      <input
+        type="email"
+        id="email"
+        required
+        placeholder="- Enter your Email Address -"
+        class="w-[18rem] sm:w-[22rem] h-10
+               rounded-lg border border-gray-900
+               bg-[#737070] text-sm text-center text-white
+               placeholder:text-gray-800 placeholder:italic
+               px-2.5 focus:outline-none"
+      />
+      <span id="emailError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+
+      <label for="password" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+        Password
+      </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        placeholder="- Enter your Password -"
+        class="w-[18rem] sm:w-[22rem] h-10
+               rounded-lg border border-gray-900
+               bg-[#737070] text-sm text-center text-white
+               placeholder:text-gray-800 placeholder:italic
+               px-2.5 focus:outline-none"
+      />
+      <span id="passwordError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+
+      <label for="confirmpassword" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+        Confirm Password
+      </label>
+      <input
+        type="password"
+        id="confirmpassword"
+        required
+        placeholder="- Confirm your Password -"
+        class="w-[18rem] sm:w-[22rem] h-10
+               rounded-lg border border-gray-900
+               bg-[#737070] text-sm text-center text-white
+               placeholder:text-gray-800 placeholder:italic
+               px-2.5 focus:outline-none"
+      />
+      <span id="confirmpasswordError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+
+      <div class="h-2"></div>
+
+      <button
+        type="submit"
+        class="Signup px-5 py-2 w-[12rem] sm:w-[14rem]
+               rounded-md bg-gray-800 text-gray-200 text-lg font-bold
+               hover:bg-gray-900 transition-colors"
+      >
+        Sign Up
+      </button>
+
+      <div
+        id="loading"
+        style="display: none;"
+        class="text-center mt-2 text-indigo-500 text-sm"
+      >
+        Creating your account...
+      </div>
+
+      <p class="already mt-2 text-sm text-black dark:text-gray-100">
+        Already have an account?
+        <a href="/login" class="alr text-[0.9rem] font-bold text-black underline dark:text-white">
+          Sign In
+        </a>
+      </p>
+    </form>
+  </div>
+
+  <div
+    class="bottombar flex items-center h-12 px-6
+           bg-white/70 text-black
+           dark:bg-black/70 dark:text-white"
+  >
+    <p class="copyright text-xs sm:text-sm">
+      © 2024 AutoDz. All rights reserved.
+    </p>
+    <p class="termsandprivacy ml-auto text-xs sm:text-sm">
+      <a href="#" class="terms-link hover:underline">Terms of Service</a> |
+      <a href="#" class="privacy-link hover:underline">Privacy Policy</a>
+    </p>
+  </div>
+
+  <script src="{{ asset('js/auth.js') }}"></script>
+  <script src="{{ asset('js/headerScript.js') }}"></script>
+  <script src="{{ asset('js/signupval.js') }}"></script>
+  
+  <script>
+    redirectIfAuthenticated('/');
+
+    const signupForm = document.getElementById('signupForm');
+    const signupBtn = document.querySelector('button[type="submit"]');
+    const loadingDiv = document.getElementById('loading');
+
+    function clearFieldError(fieldId) {
+      const errorElement = document.getElementById(fieldId + 'Error');
+      if (errorElement) errorElement.textContent = '';
+    }
+
+    function displayFieldError(fieldId, message) {
+      const errorElement = document.getElementById(fieldId + 'Error');
+      if (errorElement) errorElement.textContent = message;
+    }
+
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      console.log('Form submitted'); // Debug log
+
+      clearError('error-message');
+      clearError('success-message');
+      clearFieldError('fullname');
+      clearFieldError('email');
+      clearFieldError('password');
+      clearFieldError('confirmpassword');
+
+      const name = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmpassword').value;
+
+      let hasError = false;
+
+      if (!name || name.length > 255) {
+        displayFieldError('fullname', name ? 'Name too long' : 'Name required');
+        hasError = true;
+      }
+
+      if (!email) {
+        displayFieldError('email', 'Email is required');
+        hasError = true;
+      }
+
+      if (!password || password.length < 8 || password.length > 12) {
+        displayFieldError('password', 'Password must be 8-12 characters');
+        hasError = true;
+      }
+
+      if (password !== confirmPassword) {
+        displayFieldError('confirmpassword', 'Passwords do not match');
+        hasError = true;
+      }
+
+      if (hasError) {
+        displayError('error-message', 'Please fix the errors above');
+        return;
+      }
+
+      if (signupBtn) signupBtn.disabled = true;
+      loadingDiv.style.display = 'block';
+
+      console.log('Calling register function...'); // Debug log
+
+      try {
+        const result = await register(name, email, password);
+        
+        console.log('Register result:', result); // Debug log
+
+        if (result.success) {
+          displaySuccess('success-message', 'Account created successfully! Redirecting...');
+          setTimeout(() => {
+            window.location.href = '/';
+          }, 1500);
+        } else {
+          let errorMessage = result.error;
+
+          if (errorMessage.includes('email') && errorMessage.includes('unique')) {
+            errorMessage = 'This email is already registered. Please use a different email or login.';
+            displayFieldError('email', 'Email already exists');
+          }
+
+          displayError('error-message', errorMessage);
+          if (signupBtn) signupBtn.disabled = false;
+          loadingDiv.style.display = 'none';
+        }
+      } catch (error) {
+        console.error('Caught error:', error); // Debug log
+        displayError('error-message', 'An unexpected error occurred. Please try again.');
+        if (signupBtn) signupBtn.disabled = false;
+        loadingDiv.style.display = 'none';
+      }
+    });
+
+
+    document.getElementById('confirmpassword').addEventListener('input', function () {
+      const password = document.getElementById('password').value;
+      if (this.value && password !== this.value) {
+        displayFieldError('confirmpassword', 'Passwords do not match');
+      } else {
+        clearFieldError('confirmpassword');
+      }
+    });
+  </script>
+</body>
+</html>

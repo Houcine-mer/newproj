@@ -1,0 +1,543 @@
+.user-info-kk{
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.profile-pic-kk {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            
+        }
+        
+        .cart--pic-kk{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .cart--pic-kk.dark{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 0%;
+        }
+        .cart-btn-kk {
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .dropdown {
+    display: none; 
+    position: absolute;
+    top: 64px; 
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 120px;
+    z-index: 10000;
+  }
+
+
+    .dropdownbtn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    color : black;
+  }
+
+  .dropdownbtn:hover {
+    background-color: #f0f0f0;
+  }
+
+
+  #cartDrawer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: max(350px,30vw);
+  height: calc(100vh - 64px);
+  background-color:white;
+  box-shadow: -4px 5px 8px rgba(0,0,0,0.15);
+  transform: translateX(100%); /* hidden */
+  transition: transform 0.4s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+/* When cart is open */
+#cartDrawer.active {
+  transform: translateX(0);
+}
+
+/* Header */
+.cart-header {
+  height: 64px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Scroll only inside content */
+.cart-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+/* Example cart items */
+.cart-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.rent-card {
+  height: 130px;                 /* fixed height */
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin-bottom: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: center;           /* vertical alignment */
+}
+
+.rent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
+
+
+/* Car image */
+.rent-card img {
+  
+  width: 140px;                  /* slightly wider for balance */
+  height: 100%;                  /* fills card height */           /* keeps proportions */
+  object-position: center;       /* perfectly centered */
+  border-radius: 10px;
+  background: #f7f7f7;           /* subtle frame */
+
+  
+}
+
+/* Info section */
+.rent-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Top row */
+.rent-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rent-top h4 {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Status badge */
+.rent-status {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e6f4ea;
+  color: #1e7f45;
+  font-weight: 600;
+}
+
+/* Dates */
+.rent-dates {
+  font-size: 13px;
+  color: #666;
+  margin: 6px 0;
+}
+
+/* Bottom row */
+.rent-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rent-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+/* Remove button */
+.remove-btn-kk {
+  border: none;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: background 0.2 transform 0.2s;
+  color:black;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-left: 6px;
+}
+
+
+
+.update-btn-kk {
+  border: none;
+  background: #f5f5f5;       /* neutral background */
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  color: black;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-left: 6px;          /* spacing between buttons */
+}
+
+.update-btn-kk:hover {
+  background: #e0e0e0;       /* slightly darker on hover */
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.remove-btn-kk:hover {
+  background: #ffebeb;
+  color: #c00;
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+
+}
+@media (max-width: 1024px) {
+  #cartDrawer {
+    width: 360px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  #cartDrawer {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+  }
+
+  #cartDrawer.active {
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .rent-top h4 {
+    font-size: 16px;
+  }
+
+  .rent-price {
+    font-size: 15px;
+  }
+
+  .rent-dates {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rent-card img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .rent-card {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rent-card img {
+    width: 100%;
+    height: 140px;
+    object-position: center;
+  }
+}
+
+
+
+#update-rent-order-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show modal */
+#update-rent-order-modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal box */
+#update-rent-order-modal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+/* Modal heading */
+#update-rent-order-modal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Form grid */
+#update-rent-order-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 1rem;
+}
+
+/* Labels */
+#update-rent-order-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Inputs */
+#update-rent-order-form input[type="text"],
+#update-rent-order-form input[type="number"],
+#update-rent-order-form input[type="date"]{
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#update-rent-order-form input[type="text"]:focus,
+#update-rent-order-form input[type="number"]:focus,
+#update-rent-order-form input[type="date"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+/* Buttons container */
+#update-rent-order-form div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+#update-rent-order-form button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* Submit button */
+#update-rent-order-form button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#update-rent-order-form button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Cancel button */
+#close-update-rent-order-modal {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#close-update-rent-order-modal:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+  /* Modal box tighter on mobile */
+  #update-rent-order-modal {
+    width : 100%;
+    justify-content: center;    /* horizontal center */
+    align-items: center;        /* vertical center */
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #update-rent-order-modal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  /* One column layout */
+  #update-rent-order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  /* Labels slightly smaller */
+  #update-rent-order-form label {
+    font-size: 0.9rem;
+  }
+
+  /* Inputs more touch-friendly */
+  #update-rent-order-form input[type="text"],
+  #update-rent-order-form input[type="number"],
+  #update-rent-order-form input[type="date"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+
+  /* Buttons stack */
+  #update-rent-order-form div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #update-rent-order-form button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+#links-drawer {
+  position: fixed;
+  left: 0;
+  top:63px ;
+  width: max(350px,30vw);
+  height: calc(100vh - 63px);
+  background-color:white;
+  box-shadow: -4px 5px 8px rgba(0,0,0,0.15);
+  transform: translateX(-100%); /* hidden */
+  transition: transform 0.4s ease;
+  z-index: 9999999999999999;
+  display: flex;
+  flex-direction: column;
+}
+
+/* When cart is open */
+#links-drawer.active {
+  transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+  #links-drawer {
+    width: 360px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  #links-drawer {
+    width: 100%;
+    transform: translateY(100%);
+  }
+
+  #links-drawer.active {
+    transform: translateY(0);
+  }
+}
+
+
+.update-btn-kk-t {
+  border: none;
+  background: #f5f5f5;       /* neutral background */
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  color: black;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-left: 6px;          /* spacing between buttons */
+}
+
+.update-btn-kk-t:hover {
+  background: #e0e0e0;       /* slightly darker on hover */
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+
+.remove-btn-kk-t {
+  border: none;
+  background: #f5f5f5;       /* neutral background */
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  color: black;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-left: 6px;          /* spacing between buttons */
+}
+
+.remove-btn-kk-t:hover {
+  background: #e0e0e0;       /* slightly darker on hover */
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}

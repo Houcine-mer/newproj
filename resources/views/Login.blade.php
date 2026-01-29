@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('css/output.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/Loginstyle.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/loginsignupst.css') }}" rel="stylesheet">
+    <title>Login</title>
+  </head>
+  <body>
+
+  <div class="header" id="headID">
+    <div class="left-side">
+      <button class="show-btn" onclick="toggleNav()" id="openID">
+        <p>&#8801;</p>
+      </button>
+      <button class="close-btn" onclick="closeAll()" id="closeID">
+        <p>X</p>
+      </button>
+    </div>
+
+
+    <div class="middle-side">
+      <button class="home-btn">
+        <a href="/">HOME</a> 
+      </button>
+        
+      <button class="about-btn">
+        <a href="/cars">CARS</a>
+      </button>
+      <button class="rev-btn">
+        <a href = "/reviews" >REVIEWS</a>
+      </button>
+      <button class="about-btn">
+        <a href="/about">ABOUT</a>
+      </button>
+      <button class="switch-btn" onclick="switchMode()" id="switchID">SWITCH</button>
+    </div>
+
+
+
+    <div class="right-side">
+      <button class="login-btn">
+        <a href="/login">LOGIN</a>
+      </button>
+      <button class="sign-btn">
+        <a href="/signup"> SIGN UP</a>
+      </button>
+    </div>
+  </div>
+      <div class="form-container">
+      <form class="form" id="loginForm">
+        <p class="text">Welcome Back !</p><br />
+        <div id="error-message" style="display: none; background-color: #fee; color: #c33; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #c33; font-size: 14px;"></div>
+        <div id="success-message" style="display: none; background-color: #efe; color: #3c3; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #3c3; font-size: 14px;"></div>
+        <label for="Username">E-mail Address</label> 
+        <input type="email" id="username" class="email" placeholder="Enter your E-mail Address" name="username" />
+        <label for="password">Password</label>
+        <input type="password" id="password" class="password" placeholder="Enter your Password" name="password" />
+
+        <br /><br><br>
+      <button type="submit" class= "Login" id="login-btn">Login</button><br>
+      <div class="loading" id="loading" style="display: none; text-align: center; margin-top: 10px; color: #667eea; font-size: 14px;">Logging in...</div>
+      <p class="already">Don't have an account? <a href="/signup" class="goto">Sign Up</a></p>
+      </form>
+  
+  </div>
+
+    <div class="bottombar">
+      <p class="copyright">© 2024 AutoDz. All rights reserved.</p>
+      <p class="termsandprivacy">
+        <a href="#" class="terms-link">Terms of Service</a> | 
+        <a href="#" class="privacy-link">Privacy Policy</a>
+      </p>
+    </div>
+    <script src="{{ asset('js/Loginvalidation.js') }}Loginvalidation.js"></script>
+    <script src="{{ asset('js/headerScript.js') }}">  </script>
+    <script src="{{ asset('js/auth.js') }}"></script>
+  <script>
+    redirectIfAuthenticated('/');
+
+    const loginForm = document.getElementById('loginForm');
+    const loginBtn = document.getElementById('login-btn');
+    const loadingDiv = document.getElementById('loading');
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      clearError('error-message');
+      clearError('success-message');
+      
+      const email = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      
+      if (!email || !password) {
+        displayError('error-message', 'Please fill in all fields');
+        return;
+      }
+
+      if (password.length < 8 || password.length > 12) {
+        displayError('error-message', 'Password must be between 8 and 12 characters');
+        return;
+      }
+      
+      loginBtn.disabled = true;
+      loadingDiv.style.display = 'block';
+      
+      try {
+        const result = await login(email, password);
+        
+        if (result.success) {
+          displaySuccess('success-message', 'Login successful! Redirecting...');
+          setTimeout(() => {
+            window.location.href = '/';
+          }, 1000);
+        } else {
+          let errorMessage = result.error;
+          
+          if (errorMessage.includes('Invalid Email')) {
+            errorMessage = 'This email address is not registered. Please check your email or sign up.';
+          } else if (errorMessage.includes('Incorrect Password')) {
+            errorMessage = 'The password you entered is incorrect. Please try again.';
+          }
+          
+          displayError('error-message', errorMessage);
+          loginBtn.disabled = false;
+          loadingDiv.style.display = 'none';
+        }
+      } catch (error) {
+        displayError('error-message', 'An unexpected error occurred. Please try again.');
+        loginBtn.disabled = false;
+        loadingDiv.style.display = 'none';
+      }
+    });
+  </script>
+  </body>
+</html>

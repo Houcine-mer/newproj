@@ -1,0 +1,1089 @@
+#updateModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#updateModal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+#updateModal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+
+#updateModal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+
+#updateForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 1rem;
+}
+
+
+#updateForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+#updateForm label.check--upd {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+#updateForm input[type="text"],
+#updateForm input[type="number"] {
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#updateForm input[type="text"]:focus,
+#updateForm input[type="number"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+#updateForm input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #007BFF;
+  display: flex;
+}
+
+
+#updateForm label.checkbox-label {
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+
+#updateForm div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+
+#updateForm button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+
+#updateForm button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#updateForm button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+
+#cancelUpdate {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#cancelUpdate:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+  
+  #updateModal {
+    width : 100%;
+    justify-content: center;    
+    align-items: center;        
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #updateModal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  
+  #updateForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  
+  #updateForm label {
+    font-size: 0.9rem;
+  }
+
+  
+  #updateForm input[type="text"],
+  #updateForm input[type="number"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  
+  #updateForm label.check--upd {
+    grid-column: span 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+  }
+
+  
+  #updateForm div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #updateForm button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+#createCarModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#createCarModal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+
+#createCarModal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+
+#createCarModal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+
+#createCarForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 1rem;
+}
+
+
+#createCarForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+#createCarForm label.check--upd {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+#createCarForm input[type="text"],
+#createCarForm input[type="number"] {
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#createCarForm input[type="text"]:focus,
+#createCarForm input[type="number"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+#createCarForm input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #007BFF;
+  display: flex;
+}
+
+
+#createCarForm label.checkbox-label {
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+
+#createCarForm div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+
+#createCarForm button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+
+#createCarForm button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#createCarForm button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+
+#cancelCreateCar {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#cancelCreateCar:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+  
+  #createCarModal {
+    width : 100%;
+    justify-content: center;    
+    align-items: center;        
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #createCarModal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  #createCarForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #createCarForm label {
+    font-size: 0.9rem;
+  }
+
+  #createCarForm input[type="text"],
+  #createCarForm input[type="number"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  #createCarForm label.check--upd {
+    grid-column: span 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+  }
+
+  #createCarForm div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #createCarForm button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+#update-rent-order-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#update-rent-order-modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+#update-rent-order-modal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+#update-rent-order-modal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+#update-rent-order-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 1rem;
+}
+
+#update-rent-order-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+#update-rent-order-form input[type="text"],
+#update-rent-order-form input[type="number"],
+#update-rent-order-form input[type="date"]{
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#update-rent-order-form input[type="text"]:focus,
+#update-rent-order-form input[type="number"]:focus,
+#update-rent-order-form input[type="date"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+#update-rent-order-form div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+#update-rent-order-form button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#update-rent-order-form button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#update-rent-order-form button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+#close-update-rent-order-modal {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#close-update-rent-order-modal:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+
+  #update-rent-order-modal {
+    width : 100%;
+    justify-content: center;   
+    align-items: center;        
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #update-rent-order-modal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  #update-rent-order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #update-rent-order-form label {
+    font-size: 0.9rem;
+  }
+
+  #update-rent-order-form input[type="text"],
+  #update-rent-order-form input[type="number"],
+  #update-rent-order-form input[type="date"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+
+  #update-rent-order-form div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #update-rent-order-form button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+#rent-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#rent-modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+#rent-modal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+#rent-modal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+
+#rent-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 1rem;
+}
+
+
+#rent-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+#rent-form input[type="text"],
+#rent-form input[type="number"],
+#rent-form input[type="date"]{
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#rent-form input[type="text"]:focus,
+#rent-form input[type="number"]:focus,
+#rent-form input[type="date"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+#rent-form div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+#rent-form button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#rent-form button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#rent-form button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+#close-rent-modal {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#close-rent-modal:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+  #rent-modal {
+    width : 100%;
+    justify-content: center;    
+    align-items: center;      
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #rent-modal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  #rent-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #rent-form label {
+    font-size: 0.9rem;
+  }
+
+  #rent-form input[type="text"],
+  #rent-form input[type="number"],
+  #rent-form input[type="date"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+
+  #rent-form div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #rent-form button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}
+
+#createBrandModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#createBrandModal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+#createBrandModal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+#createBrandModal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+#createBrandForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem 0rem;
+}
+
+#createBrandForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+#createBrandForm label.check--upd {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#createBrandForm input[type="text"] {
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#createBrandForm input[type="text"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+
+#createBrandForm div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+#createBrandForm button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#createBrandForm button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#createBrandForm button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+#cancelCreateBrand {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#cancelCreateBrand:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+  #createBrandModal {
+    width : 100%;
+    justify-content: center;    
+    align-items: center;        
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #createBrandModal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  #createBrandForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #createBrandForm label {
+    font-size: 0.9rem;
+  }
+
+  #createBrandForm input[type="text"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+
+  #createBrandForm div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #createBrandForm button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+#deleteBrandModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#deleteBrandModal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+#deleteBrandModal > div {
+  box-sizing: content-box;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+#deleteBrandModal h2 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+#deleteBrandForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem 0rem;
+}
+
+#deleteBrandForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #555;
+}
+#deleteBrandForm label.check--upd {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#deleteBrandForm input[type="text"] {
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#deleteBrandForm input[type="text"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+#deleteBrandForm div {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+#deleteBrandForm button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#deleteBrandForm button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+#deleteBrandForm button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+#cancelDeleteBrand {
+  background: #e0e0e0;
+  color: #333;
+}
+
+#cancelDeleteBrand:hover {
+  background: #cfcfcf;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 650px) {
+
+  #deleteBrandModal {
+    width : 100%;
+    justify-content: center;   
+    align-items: center;       
+    padding: 0 1rem;
+    position: absolute;
+  }
+  #deleteBrandModal > div {
+    width: 95%;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  #deleteBrandForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #deleteBrandForm label {
+    font-size: 0.9rem;
+  }
+
+  
+  #deleteBrandForm input[type="text"] {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+
+
+  #deleteBrandForm div {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #deleteBrandForm button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
