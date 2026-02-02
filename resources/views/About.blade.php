@@ -68,10 +68,8 @@
         <div><a href="/">Home</a></div>
         <div><a href="/cars">Cars List</a></div>
         <div><a href="/tour">Tour</a></div>
-        <div class="dark-modesec">
-          <button class="darkmodebt" id="darkmodebtn"> 
-            <span id="darkModeIcon">🌙</span>
-          </button>
+        <div id ="ModeDiv">
+          <button onclick="switchMode()" id="switchIDV">Dark Mode</button>
         </div>
       </div>
     </div>  
@@ -154,11 +152,11 @@
         <div><a href="/reviews">Reviews</a></div>
       </div>
     </div>
-    <script src="{{ asset('js/maindark.js') }}"></script>
     <script src="{{ asset('js/auth.js') }}"></script>
     <script src="{{ asset('js/headerScriptabout.js') }}"> </script>
     <script src="{{ asset('js/headerScript.js') }}"></script>
     <script src="{{ asset('js/load-all.js') }}"></script>
     <script src="{{ asset('js/usrly.js') }}"></script>
+    <script src="{{ asset('js/maindark.js') }}"></script>
   </body>
 </html>

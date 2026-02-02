@@ -73,10 +73,8 @@
         <div><a href="/tour">Tour</a></div>
         <div><a href="/reviews">Reviews</a></div>
         <div><a href="/about">About</a></div>
-        <div class="dark-modesec">
-          <button class="darkmodebt" id="darkmodebtn"> 
-            <span id="darkModeIcon">🌙</span>
-          </button>
+        <div id ="ModeDiv">
+          <button onclick="switchMode()" id="switchIDV">Dark Mode</button>
         </div>
       </div>
     </div>      
@@ -221,10 +219,10 @@
       <button id="logoutBtn"class="dropdownbtn">Logout</button>
     </div>
     
-    <script src="{{ asset('js/maindark.js') }}"></script>
     <script src="{{ asset('js/auth.js') }}"></script>
     <script src="{{ asset('js/headerScript.js') }}"></script>
     <script src="{{ asset('js/load-all.js') }}"></script>
     <script src="{{ asset('js/usrly.js') }}"></script>
+    <script src="{{ asset('js/maindark.js') }}"></script>
   </body>
 </html>

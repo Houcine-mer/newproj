@@ -1,21 +1,33 @@
-const currentTheme = localStorage.getItem('theme');
-const darkModeToggle = document.getElementById('darkmodebtn');
-const darkModeIcon = document.getElementById('darkModeIcon');
+const currentTheme = localStorage.getItem("theme");
+console.log(currentTheme);
+const Modebtn = document.getElementById("switchIDV");
+const ModeDiv = document.getElementById("ModeDiv");
 
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    if (darkModeIcon) darkModeIcon.textContent = '☀️';
-}
-
-if (darkModeToggle) {
-    darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        const isDark = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        
-        if (darkModeIcon) {
-            darkModeIcon.textContent = isDark ? '☀️' : '🌙';
-        }
-    });
-}
+document.addEventListener("DOMContentLoaded", () => {
+    if (currentTheme === "dark") {
+        Modebtn.innerHTML = "";
+        Modebtn.textContent = "Light Mode";
+    }
+    if (currentTheme === "Light") {
+        Modebtn.innerHTML = "";
+        Modebtn.textContent = "Dark Mode";
+    }
+});
+ModeDiv.addEventListener("click", () => {
+    const mode = localStorage.getItem("theme");
+    if (mode === "dark") {
+        mode = "Light";
+    }
+    if (mode === "Light") {
+        mode = "Dark";
+    }
+    if (currentTheme === "dark") {
+        Modebtn.innerHTML = "";
+        Modebtn.textContent = "Light Mode";
+    }
+    if (currentTheme === "Light") {
+        Modebtn.innerHTML = "";
+        Modebtn.textContent = "Dark Mode";
+    }
+    localStorage.setItem("theme", mode);
+});
