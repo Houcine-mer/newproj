@@ -63,13 +63,16 @@
     font-weight: bold;
   }
 
-  
+  .termsandprivacy:hover {
+    text-decoration: underline;
+  }
+
   .bottombar {
     display: flex;
     align-items: center;
     height: 44px; 
-    background-color: #ffffff;
-    opacity: 0.65;
+    background-color: #000000;
+    opacity: 0.8;
     padding-left: 8px;
     padding-right: 8px;
     position: fixed;
@@ -82,51 +85,29 @@
   .copyright {
     text-align: left;
     font-size: 9px;
-    color: black;
+    color: white;
   }
 
-  .termsandprivacy {
+  .termsandprivacy{
     text-align: right;
     font-size: 9px;
-    color: black;
+    color: white;
     margin-left: auto;
   }
 
-  .termsandprivacy:hover {
-    text-decoration: underline;
-  }
-
   
-  .bottombar.dark {
-    background-color: #000000;
-    opacity: 0.65;
-  }
-
-  .copyright.dark {
-    color: white;
-  }
-
-  .termsandprivacy.dark {
-    color: white;
-  }
-
-  
-  .form-container {
+  .form-container{
     min-height: 100vh;
     overflow-y: hidden;
     padding: 16px; 
     display: flex;
-    background-image: url('/laravel11-carstore-proj/public/images/upcoming-trends-in-the-world-of-car-dealerships.jpeg');
+    background-image: url('../images/mercedes-black-raobpqc23szwxs7d.jpg');
     opacity: 1;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     justify-content: center;
     align-items: center;
-  }
-
-  .form-container.dark {
-    background-image: url('/laravel11-carstore-proj/public/images/mercedes-black-raobpqc23szwxs7d.jpg');
   }
 
   .text {
@@ -143,7 +124,7 @@
     padding-bottom: 20px;
     max-width: 48rem; 
     display: flex;
-    background-color: rgba(176, 176, 176, 0.039); /* #b0b0b064 */
+    background-color: rgba(176, 176, 176, 0.496); /* #b0b0b064 */
     flex-direction: column;
     align-items: center;
     gap: 8px; 
@@ -307,8 +288,8 @@
     display: flex;
     align-items: center;
     height: 48px;
-    background-color: #ffffff;
-    opacity: 0.5;
+    background-color: #000000;
+    opacity: 0.8;
     padding-left: 24px;
     padding-right: 24px;
     position: fixed;
@@ -321,13 +302,13 @@
   .copyright {
     text-align: left;
     font-size: 14px;
-    color: black;
+    color: white;
   }
 
   .termsandprivacy {
     text-align: right;
     font-size: 14px;
-    color: black;
+    color: white;
     margin-left: auto;
   }
 
@@ -335,34 +316,19 @@
     text-decoration: underline;
   }
 
-  .bottombar.dark {
-    background-color: #000000;
-    opacity: 0.65;
-  }
 
-  .copyright.dark {
-    color: white;
-  }
-
-  .termsandprivacy.dark {
-    color: white;
-  }
 
   .form-container {
     min-height: 100vh;
     padding: 16px;
     display: flex;
-    background-image: url('../images/upcoming-trends-in-the-world-of-car-dealerships.jpeg');
+    background-image: url('../images/mercedes-black-raobpqc23szwxs7d.jpg');
     opacity: 1;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     justify-content: center;
     align-items: center;
-  }
-
-  .form-container.dark {
-    background-image: url('../images/mercedes-black-raobpqc23szwxs7d.jpg');
   }
 
   .text {

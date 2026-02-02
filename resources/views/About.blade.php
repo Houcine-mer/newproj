@@ -90,10 +90,16 @@
             <p>_____________</p>
           </div>
           <p class="Contact">Contact And Support</p>
-          <div class="Socials">
-            <img class="facebookicon" src="images/2023_Facebook_icon.svg.png" alt="Facebook Icon">
-            <img class="insticon" src="images/vecteezy_instagram-logo-on-square-style-with-transparent-background_42127166.png" alt="Instagram Icon">
-            <img class="xicon" src="images/x.jpg" alt="Twitter Icon">
+          <div class="flex relative top-4 right-[46vw] items-center justify-center gap-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <img class="w-8 h-8 md:w-10 md:h-10 lg:w-8 lg:h-8" src="images/2023_Facebook_icon.svg.png" alt="Facebook Icon">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <img class="w-8 h-8 md:w-11 md:h-11 lg:w-9 lg:h-9" src="images/vecteezy_instagram-logo-on-square-style-with-transparent-background_42127166.png" alt="Instagram Icon">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <img class="w-8 h-8 md:w-10 md:h-10 lg:w-8 lg:h-8" src="images/x.jpg" alt="Twitter Icon">
+            </a>
           </div>
           <a href="" class="helpcenter">. Help Center</a>
         </div>

@@ -12,6 +12,7 @@
     <link href="{{ asset('css/usrlay.css') }}" rel="stylesheet">
     <link href="{{ asset('css/headerStyle.css') }}" rel="stylesheet">
     <link href="{{ asset('css/maindarkmode.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/maingrid.css') }}" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
   </head>
   <body>
@@ -81,112 +82,113 @@
     </div>      
     <div class="image-container">  
       <img src="images/upcoming-trends-in-the-world-of-car-dealerships.jpeg" alt="AutoDz" class="object-cover h-100 w-full md:h-[40vh] lg:h-[60vh]  opacity=80">
-      <div class="absolute text-white font-bold text-[2rem] sm:text-[2.5rem] md:text-[4rem] lg:text-[3rem] font-['Poppins'] top-[12vh] left-[6vw]">
+      <div class="absolute text-white font-bold text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-['Poppins'] top-[12vh] left-[6vw]">
         Find your perfect car
       </div>
     </div> 
     <div class="flex justify-center sm:mt-[5vh] sm:mb-[5vh] md:mb-0 lg:mt-[9vh] lg:mb-[9vh]">
-      <h1 class="mt-[4vh] mb-[3vh] sm:mb-[6vh] md:mb-0 lg:mb-[5vh] text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[3.25rem] text-center font-bold font-['Poppins'] text-3xl text-black opacity-80">Featured Cars
-      <p class="text-black  mt-[2vh] ml-[4vw] mr-[4vw] text-[1.25rem] sm:text-[1.5rem] md:text-[2rem] xl-text-[2rem] font-bold text-center font-['Roboto'] align-left">Discover Our handpicked selection of premium vehicles available for purshase or rental </p>
+      <h1 class="mt-[4vh] mb-[3vh] sm:mb-[6vh] md:mb-0 lg:mb-[5vh] text-[2rem] sm:text-[3rem] lg:text-[3.25rem] text-center font-bold font-['Poppins'] text-3xl text-black opacity-80">Featured Cars
+      <p class="text-black  mt-[2vh] ml-[4vw] mr-[4vw] text-[1.25rem] sm:text-[1.5rem] xl-text-[2rem] font-bold text-center font-['Roboto'] align-left">Discover Our handpicked selection of premium vehicles available for purshase or rental </p>
       </h1>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[4vw] py-3 px-4 mr-2 ml-2">
-      <div class="bg-rgb(68, 68, 69) py-[3vh] px-[1.75vw] transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] rounded-lg shadow-lg">
-          <img style="margin-top: 3vh; margin-bottom:1vh ;margin-left: 9px;border-radius:10%" src="/images/GlaSuv.jpg" alt="bmw x5" title="bmw x5" width="95%" height="40%">
-          <h3 class="text-center text-xl sm:text-2xl md:text-4xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES GLA SUV</h3>
-          <h2 class="text-2xl lg:text-lg" style="margin-top: 0; color: rgb(68, 68, 69);">$70000</h2>
-          <p style="margin-top: 0;">or $89/day</p>
-          <br />
-          <div class="flex justify-center gap-[7vw] xl:gap-[4vw]">
-              <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
-              <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
-          </div>
-      </div>
-      <div class="bg-rgb(68, 68, 69) py-[3vh] px-[1.75vw] transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] rounded-lg shadow-lg">
-          <img class="mx-auto" style=" margin-top: 1vh; margin-bottom:1vh ;border-radius:10%" src="/images/rs6-pic.avif" alt="tesla" title="tesla" width="87%" height="30%">
-          <h3 class="text-center text-xl sm:text-2xl md:text-4xl lg:text-xl font-bold font-['Poppins']"  style="margin-top: 0;">AUDI RS6</h3>
-          <h2 class="text-2xl lg:text-lg" style="margin-top: 0; color: rgb(68, 68, 69);">$120000</h2>
-          <p style="margin-top: 0;">or $89/day</p>
-          <br />
-          <div class="flex justify-center gap-[7vw] xl:gap-[4vw]">
-              <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
-              <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
-          </div>
-      </div>
-      <div class="bg-rgb(68, 68, 69) py-[3vh] px-[1.75vw] transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] rounded-lg shadow-lg ">
-        <img style="margin-top: 1vh; margin-bottom:1vh ;margin-left: 9px;border-radius:10%" src="/images/G-Class.jpg" alt="bmw x5" title="bmw x5" width="95%" height="40%">
-        <h3 class="text-center text-xl sm:text-2xl md:text-4xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES G-CLASS</h3>
-        <h2 class="text-2xl lg:text-lg" style="margin-top: 0; color: rgb(68, 68, 69);">$150000</h2>
-        <p style="margin-top: 0;">or $69/day</p>
+
+    <div class="cars-grid">
+      <div class="car-card">
+        <img style="margin-top: 3vh; margin-bottom:1vh ;margin-left: 9px;border-radius:10%" src="/images/GlaSuv.jpg" alt="bmw x5" title="bmw x5" width="95%" height="40%">
+        <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES GLA SUV</h3>
+        <h2 id="price1" class="text-2xl lg:text-lg" style="margin-top: 0;">$70000</h2>
+        <p style="margin-top: 0;">or $89/day</p>
         <br />
-        <div class="flex justify-center gap-[7vw] xl:gap-[4vw]">
-            <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem] font-bold font['Poppins'] hover:bg-gray-950 transition duration-300">Buy</a>
-            <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem] font-bold font['Poppins'] hover:bg-gray-950 transition duration-300">Rent</a>
+        <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
         </div>
       </div>
-      <div class="bg-rgb(68, 68, 69) py-[3vh] px-[1.75vw] transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] rounded-lg shadow-lg">
-          <img class="mx-auto" style=" margin-bottom:1vh" src="/images/M3.webp" alt="mercedes" title="mercedes" width="87%">
-          <h3 class="text-center text-xl sm:text-2xl md:text-4xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">BMW M3</h3>
-          <h2 class="text-2xl lg:text-lg" style="margin-top: 0; color: rgb(68, 68, 69);">$120000</h2>
-          <p style="margin-top: 0;">or $79/day</p>
-          <br />
-          <div class="flex justify-center gap-[7vw] xl:gap-[4vw]">
-              <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem] font-bold font['Poppins'] hover:bg-gray-950 transition duration-300">Buy</a>
-              <a class="bg-gray-900 px-[11vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.5rem] md:text-[1.66rem] lg:text-[1rem] font-bold font['Poppins'] hover:bg-gray-950 transition duration-300">Rent</a>
-          </div>
-      </div> 
+    
+      <div class="car-card">
+        <img class="mx-auto" style=" margin-top: 1vh; margin-bottom:1vh ;border-radius:10%" src="/images/rs6-pic.avif" alt="tesla" title="tesla" width="95%" height="40%">
+        <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']"  style="margin-top: 0;">AUDI RS6</h3>
+        <h2 id="price2" class="text-2xl lg:text-lg" style="margin-top: 0;">$120000</h2>
+        <p style="margin-top: 0;">or $89/day</p>
+        <br />
+        <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
+        </div>
+      </div>
+    
+      <div class="car-card">
+        <img style="margin-top: 1vh; margin-bottom:1vh ;margin-left: 9px;border-radius:10%" src="/images/G-Class.jpg" alt="bmw x5" title="bmw x5" width="95%" height="40%">
+        <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES G-CLASS</h3>
+        <h2 id="price3" class="text-2xl lg:text-lg" style="margin-top: 0;">$150000</h2>
+        <p style="margin-top: 0;">or $69/day</p>
+        <br />
+        <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
+        </div>
+      </div>
+    
+      <div class="car-card">
+        <img class="mx-auto" style="margin-top: 1vh; margin-bottom:1vh" src="/images/M3.webp" alt="mercedes" title="mercedes" width="95%" height="50%">
+        <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">BMW M3</h3>
+        <h2 id="price4" class="text-2xl lg:text-lg" style="margin-top: 0;">$120000</h2>
+        <p style="margin-top: 0;">or $79/day</p>
+        <br />
+        <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
+        </div>
+      </div>
     </div>
-
     <div class="flex justify-center">
-      <a href="CarsList.html" class="inline-flex mt-14 md:mt-30 justify-center items-center px-[8vw] lg:px-[6vw] py-2 md:py-4 lg:py-2 bg-gray-900 text-white text-[1rem] md:text-[1.75rem] lg:text-[1.25rem] font-bold font-['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">
+      <a href="/cars" class="inline-flex mt-14 md:mt-30 justify-center items-center px-[8vw] lg:px-[6vw] py-2 md:py-4 lg:py-2 bg-gray-900 text-white text-[1rem] lg:text-[1.25rem] font-bold font-['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">
         View All Cars
       </a>
     </div>
     <br><br><br><br>
-    <h1 class=" mb-[9vh] lg:mb-[14vh] text-[2.25rem] sm:text-[3rem] md:text-[5rem] lg:text-[3.25rem] text-center font-bold font-['Poppins'] text-black opacity-80 " >Our Services</h1>
-    <div class="grid justify-center grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-[4vw] mr-2 ml-2">
-      <div class=" item-center justify-center rounded-md ml-20 mr-20 mb-10 lg:mb-[10vh]  ">
-        <h3 class=" mt-[1.7vh] mb-4 text-[1.75rem] sm:[3rem] md:text-[4rem] lg:text-[2rem] text-center font-black text-black font-['Poppins']">Buy Cars</h3>
-        <p class="text-black opacity-90 text-[1.25rem] sm:text-[2rem] md:text-[3rem] lg:text-[1.75rem] text-center font-['Poppins'] align-left" >  
-          Browse thousands of new and usedcars from certified dealers and private sellers. Get the best deals with our price comparison tools.
-        </p>
+    <h1 class=" mb-[9vh] lg:mb-[14vh] text-[2.25rem] sm:text-[3rem] md:text-[3.25rem] lg:text-[3.25rem] text-center font-bold font-['Poppins'] text-black opacity-80 " >Our Services</h1>
+    <div class="services-grid">
+      <div class="service-item">
+        <div>
+          <h3 class=" mt-[1.7vh] mb-4 text-[1.75rem] sm:[3rem] lg:text-[2rem] text-center font-black text-black font-['Poppins']">Buy Cars</h3>
+          <p class="text-black opacity-90 text-[1.25rem] sm:text-[2rem] lg:text-[1.75rem] text-center font-['Poppins'] align-left" >  
+            Browse thousands of new and usedcars from certified dealers and private sellers. Get the best deals with our price comparison tools.
+          </p>
+        </div>
       </div>
-      <div class=" rounded-md mb-10 ml-20 mr-20 lg:mb-[10vh]  ">
-        <h3 class=" mb-4 text-[1.75rem] sm:[3rem] md:text-[4rem] lg:text-[2rem] text-center font-black text-black font-['Poppins']">
-          Rent Cars
-        </h3>
-        <p class="text-black opacity-90 text-[1.25rem] sm:text-[2rem] md:text-[3rem] lg:text-[1.75rem] text-center font-['Poppins'] align-left">  
-          Browse thousands of new and used
-          Rent cars for any occasion from daily commutes to weekend getaways.
-          We offer competitive rates and a seamless rental experience:
-        </p>
+    
+      <div class="service-item">
+        <div>
+          <h3 class=" mb-4 text-[1.75rem] sm:[3rem] lg:text-[2rem] text-center font-black text-black font-['Poppins']">
+            Rent Cars
+          </h3>
+          <p class="text-black opacity-90 text-[1.25rem] sm:text-[2rem] lg:text-[1.75rem] text-center font-['Poppins'] align-left">  
+            Browse thousands of new and used
+            Rent cars for any occasion from daily commutes to weekend getaways.
+            We offer competitive rates and a seamless rental experience:
+          </p>
+        </div>
       </div>
-      <div class=" rounded-md mb-10 ml-20 mr-20 lg:mb-[10vh]  ">
-        <h3 class=" mb-4 text-[1.75rem] sm:[3rem] md:text-[4rem] lg:text-[1.75rem] text-center font-black text-black font-['Poppins']">
-          Driver Experience simulation 
-        </h3>
-        <p class="text-black opacity-90 text-[1.25rem] sm:text-[2rem] md:text-[3rem] lg:text-[1.75rem] text-center font-['Poppins'] align-left" >  
-          Book an appointment for a comprehensive driving simulation  .
-          Test vehicle performance in
-          various road and weather conditions safely
-        </p>
-      </div>
-      <div class=" rounded-md mb-25 ml-20 mr-20  lg:hidden ">
-        <h3 class=" mb-4 text-[1.75rem] sm:[3rem] md:text-[4rem] lg:text-[2rem] text-center font-black text-black font-['Poppins']">
-          Test Drive 
-        </h3>
-        <p class="text-black opacity-90 text-[1.25rem] sm:text-[2rem] md:text-[3rem] lg:text-[1.75rem] text-center font-['Poppins'] align-left">  
-          Take any car for a few hours to experience its
-          performance and comfort. Test drive multiple vehicles to make 
-          an informed decision before buying:
-        </p>
+    
+      <div class="service-item">
+        <div>
+          <h3 class=" mb-4 text-[1.75rem] sm:[3rem] lg:text-[2rem] text-center font-black text-black font-['Poppins']">
+            Test Drive 
+          </h3>
+          <p class="text-black opacity-90 text-[1.25rem] sm:text-[2rem] lg:text-[1.75rem] text-center font-['Poppins'] align-left">  
+            Take any car for a few hours to experience its
+            performance and comfort. Test drive multiple vehicles to make 
+            an informed decision before buying:
+          </p>
+        </div>
       </div>
     </div>
     <div class="py-2 bg-gray-900 flex h-[14vh] sm:h-[15vh] md:h-[10vh] lg:h-[15vh] w-full justify-center ">
       <div class="relative bottom-1 left-[4vw] text-center text-gray-950 mt-1 text-4xl font-bold font-['Roboto']">
         <p>_____________</p>
       </div>
-      <p class="absolute mt-1 sm:mt-5 lg:mt-1 text-white font-bold  text-center text-2xl md:text-4xl lg-xl xl:text-xl font-['Poppins']">Contact And Support</p>
+      <p class="absolute mt-1 sm:mt-5 lg:mt-1 text-white font-bold  text-center text-xl md:text-2xl lg-xl xl:text-xl font-['Poppins']">Contact And Support</p>
       <div class="flex relative top-4 right-[46vw] items-center justify-center gap-4">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <img class="w-8 h-8 md:w-10 md:h-10 lg:w-8 lg:h-8" src="images/2023_Facebook_icon.svg.png" alt="Facebook Icon">

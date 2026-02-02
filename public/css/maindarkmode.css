@@ -20,6 +20,7 @@ body.dark-mode p {
     color: white;
 }
 
+
 body.dark-mode .bg-gray-900 {
     background-color: #0a0a0a;
 }
@@ -32,6 +33,24 @@ body.dark-mode .shadow-lg {
 body.dark-mode .text-black {
     color: white !important;
 }
+
+body.dark-mode #cartDrawer {
+    background-color: #0f0f0f;
+    color:white;
+}
+
+body.dark-mode #links-drawer {
+    background-color: #0f0f0f;
+    color:white;
+}
+
+body.dark-mode .home-btn,
+body.dark-mode .tour-btn,
+body.dark-mode .rev-btn,
+body.dark-mode .about-btn {
+    color: white ;
+}
+
 
 .dark-mode-toggle {
     background: none;

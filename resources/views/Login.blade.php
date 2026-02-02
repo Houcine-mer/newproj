@@ -35,7 +35,6 @@
       <button class="about-btn">
         <a href="/about">ABOUT</a>
       </button>
-      <button class="switch-btn" onclick="switchMode()" id="switchID">SWITCH</button>
     </div>
 
 
