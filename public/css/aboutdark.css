@@ -4,7 +4,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark-mode {
+body.dark-mode .mid{
     background-color: #1a1a1a;
     color: white;
 }
@@ -13,11 +13,14 @@ body.dark-mode .header {
     background-color: #2d2d2d;
 }
 
+body.dark-mode #line {
+    color: #111827;
+}
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode p {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -55,7 +58,6 @@ body.dark-mode #links-drawer {
 
 body.dark-mode .home-btn,
 body.dark-mode .tour-btn,
-body.dark-mode .rev-btn,
 body.dark-mode .about-btn {
     color: white ;
 }

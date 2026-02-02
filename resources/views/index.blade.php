@@ -184,32 +184,37 @@
         </div>
       </div>
     </div>
-    <div class="py-2 bg-gray-900 flex h-[14vh] sm:h-[15vh] md:h-[10vh] lg:h-[15vh] w-full justify-center ">
-      <div class="relative bottom-1 left-[4vw] text-center text-gray-950 mt-1 text-4xl font-bold font-['Roboto']">
-        <p>_____________</p>
+    <div class="py-4 bg-gray-900 w-full">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-white font-bold text-center text-xl md:text-2xl font-['Poppins'] mb-4">
+          Contact And Support
+        </p>
+        
+        <div class="flex items-center justify-center gap-4 mb-4">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img class="w-8 h-8 md:w-10 md:h-10" src="images/2023_Facebook_icon.svg.png" alt="Facebook Icon">
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <img class="w-8 h-8 md:w-11 md:h-11" src="images/vecteezy_instagram-logo-on-square-style-with-transparent-background_42127166.png" alt="Instagram Icon">
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <img class="w-8 h-8 md:w-10 md:h-10" src="images/x.jpg" alt="Twitter Icon">
+          </a>
+        </div>
+        
+        <div class="text-center">
+          <a href="" class="text-white text-sm md:text-base font-['Roboto'] hover:underline">
+            Help Center
+          </a>
+        </div>
       </div>
-      <p class="absolute mt-1 sm:mt-5 lg:mt-1 text-white font-bold  text-center text-xl md:text-2xl lg-xl xl:text-xl font-['Poppins']">Contact And Support</p>
-      <div class="flex relative top-4 right-[46vw] items-center justify-center gap-4">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <img class="w-8 h-8 md:w-10 md:h-10 lg:w-8 lg:h-8" src="images/2023_Facebook_icon.svg.png" alt="Facebook Icon">
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-          <img class="w-8 h-8 md:w-11 md:h-11 lg:w-9 lg:h-9" src="images/vecteezy_instagram-logo-on-square-style-with-transparent-background_42127166.png" alt="Instagram Icon">
-        </a>
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-          <img class="w-8 h-8 md:w-10 md:h-10 lg:w-8 lg:h-8" src="images/x.jpg" alt="Twitter Icon">
-        </a>
-      </div>
-      <a href="" class="absolute mt-[7vh] sm:mt-[15vh] md:mt-[7vh] right-[10vw] text-white text-[1rem] font-['Roboto']">
-        . Help Center
-      </a>
     </div>
-    
-    <div class="relative flex justify-center items-center h-13 bg-[#181818] px-2 bottom-0 left-0 right-0 z-50">
-      <p class="text-left text-xs text-white">© 2024 AutoDz. All rights reserved.</p>
-      <p class="text-right text-xs text-white ml-auto hover:underline">
-        <a href="#" class="terms-link">Terms of Service</a> | 
-        <a href="#" class="privacy-link">Privacy Policy</a>
+
+    <div class="flex flex-col md:flex-row justify-center md:justify-between items-center bg-[#181818] px-4 md:px-8 py-4 gap-2">
+      <p class="text-xs text-white text-center md:text-left">© 2024 AutoDz. All rights reserved.</p>
+      <p class="text-xs text-white text-center md:text-right">
+        <a href="#" class="terms-link hover:underline">Terms of Service</a> | 
+        <a href="#" class="privacy-link hover:underline">Privacy Policy</a>
       </p>
     </div>
     <div class="dropdown" id="dropdownMenu">
