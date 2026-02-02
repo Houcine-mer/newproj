@@ -33,10 +33,9 @@
         <button class="about-btn">
           <a href="/tour">TOUR</a>
         </button>
-        <button class="home-btn">
+        <button class="h-btn">
           <a href = "/" >HOME</a>
         </button>
-
       </div>
 
       <div class="right-side">

@@ -57,6 +57,7 @@ body.dark-mode #links-drawer {
 }
 
 body.dark-mode .home-btn,
+body.dark-mode .h-btn,
 body.dark-mode .tour-btn,
 body.dark-mode .about-btn {
     color: white ;
