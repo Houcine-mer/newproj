@@ -130,10 +130,10 @@
       </div>
     
       <div class="car-card">
-        <img class="mx-auto" style="margin-top: 1vh; margin-bottom:1vh" src="/images/M3.webp" alt="mercedes" title="mercedes" width="95%" height="50%">
-        <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">BMW M3</h3>
+        <img class="mx-auto" style="margin-top: 1vh; margin-bottom:1vh" src="/images/mercedes-benz-e-class-black.avif" alt="mercedes" title="mercedes" width="95%" height="50%">
+        <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES E-CLASS</h3>
         <h2 id="price4" class="text-2xl lg:text-lg" style="margin-top: 0;">$120000</h2>
-        <p style="margin-top: 0;">or $79/day</p>
+        <p style="margin-top: 0; margin-bottom: 3vh">or $79/day</p>
         <br />
         <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
           <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
