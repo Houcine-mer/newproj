@@ -147,6 +147,7 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .h-btn,
   .about-btn,
   .sim-btn,
   .rev-btn,

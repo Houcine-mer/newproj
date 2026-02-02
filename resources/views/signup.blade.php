@@ -35,7 +35,6 @@
       <button class="about-btn">
         <a href="/about">ABOUT</a>
       </button>
-      <button class="switch-btn" onclick="switchMode()" id="switchID">SWITCH</button>
     </div>
 
     <div class="right-side">
@@ -54,31 +53,32 @@
            bg-cover bg-center bg-fixed
            dark:bg-[url('/images/mercedes-black-raobpqc23szwxs7d.jpg')]"
   >
-    <form
-      id="signupForm"
-      action="#"
-      method="post"
-      class="w-full max-w-3xl bg-white/40 dark:bg-black/40
-             backdrop-blur-sm rounded-md shadow-md
-             flex flex-col items-center gap-3
-             px-6 sm:px-10 lg:px-20 py-4"
-    >
-      <p class="mb-[1vh] text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
-        Create your Account !
-      </p>
+  <form
+    id="signupForm"
+    action="#"
+    method="post"
+    class="w-full max-w-2xl bg-white/40 dark:bg-black/40
+          backdrop-blur-sm rounded-md shadow-md
+          flex flex-col items-center gap-3
+          px-6 sm:px-10 lg:px-20 py-4"
+  >
+    <p class="mb-[5vh] text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
+      Create your Account !
+    </p>
 
-      <div
-        id="error-message"
-        style="display: none; background-color: #fee; color: #c33; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #c33; font-size: 14px;"
-        class="w-full"
-      ></div>
-      <div
-        id="success-message"
-        style="display: none; background-color: #efe; color: #3c3; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #3c3; font-size: 14px;"
-        class="w-full"
-      ></div>
+    <div
+      id="error-message"
+      style="display: none; background-color: #fee; color: #c33; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #c33; font-size: 14px;"
+      class="w-full"
+    ></div>
+    <div
+      id="success-message"
+      style="display: none; background-color: #efe; color: #3c3; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #3c3; font-size: 14px;"
+      class="w-full"
+    ></div>
 
-      <label for="fullname" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+    <div class="w-full max-w-xl flex flex-col gap-2">
+      <label for="fullname" class="mt-[4vh] text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
         Full Name
       </label>
       <input
@@ -86,16 +86,17 @@
         id="fullname"
         required
         placeholder="- Enter your Full Name -"
-        class="w-[18rem] sm:w-[22rem] h-10
-               rounded-lg border border-gray-900
-               bg-[#737070] text-sm text-center text-white
-               placeholder:text-gray-800 placeholder:italic
-               px-2.5 focus:outline-none"
+        class="w-full h-10
+              rounded-lg border border-gray-900
+              bg-[#737070] text-sm text-center text-white
+              placeholder:text-gray-800 placeholder:italic
+              px-2.5 focus:outline-none"
       />
       <span id="fullnameError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+    </div>
 
-      <!-- Email -->
-      <label for="email" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+    <div class="w-full max-w-xl flex flex-col gap-2">
+      <label for="email" class="text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
         E-mail Address
       </label>
       <input
@@ -103,15 +104,17 @@
         id="email"
         required
         placeholder="- Enter your Email Address -"
-        class="w-[18rem] sm:w-[22rem] h-10
-               rounded-lg border border-gray-900
-               bg-[#737070] text-sm text-center text-white
-               placeholder:text-gray-800 placeholder:italic
-               px-2.5 focus:outline-none"
+        class="w-full h-10
+              rounded-lg border border-gray-900
+              bg-[#737070] text-sm text-center text-white
+              placeholder:text-gray-800 placeholder:italic
+              px-2.5 focus:outline-none"
       />
       <span id="emailError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+    </div>
 
-      <label for="password" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+    <div class="w-full max-w-xl flex flex-col gap-2">
+      <label for="password" class="text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
         Password
       </label>
       <input
@@ -120,15 +123,17 @@
         name="password"
         required
         placeholder="- Enter your Password -"
-        class="w-[18rem] sm:w-[22rem] h-10
-               rounded-lg border border-gray-900
-               bg-[#737070] text-sm text-center text-white
-               placeholder:text-gray-800 placeholder:italic
-               px-2.5 focus:outline-none"
+        class="w-full h-10
+              rounded-lg border border-gray-900
+              bg-[#737070] text-sm text-center text-white
+              placeholder:text-gray-800 placeholder:italic
+              px-2.5 focus:outline-none"
       />
       <span id="passwordError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+    </div>
 
-      <label for="confirmpassword" class="w-full text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
+    <div class="w-full max-w-xl flex flex-col gap-2">
+      <label for="confirmpassword" class="text-[1rem] sm:text-lg font-bold text-[#1f1f1f] dark:text-gray-100">
         Confirm Password
       </label>
       <input
@@ -136,40 +141,41 @@
         id="confirmpassword"
         required
         placeholder="- Confirm your Password -"
-        class="w-[18rem] sm:w-[22rem] h-10
-               rounded-lg border border-gray-900
-               bg-[#737070] text-sm text-center text-white
-               placeholder:text-gray-800 placeholder:italic
-               px-2.5 focus:outline-none"
+        class="w-full h-10
+              rounded-lg border border-gray-900
+              bg-[#737070] text-sm text-center text-white
+              placeholder:text-gray-800 placeholder:italic
+              px-2.5 focus:outline-none"
       />
       <span id="confirmpasswordError" class="text-red-600 text-xs sm:text-sm font-semibold block"></span>
+    </div>
 
-      <div class="h-2"></div>
+    <div class="h-2"></div>
 
-      <button
-        type="submit"
-        class="Signup px-5 py-2 w-[12rem] sm:w-[14rem]
-               rounded-md bg-gray-800 text-gray-200 text-lg font-bold
-               hover:bg-gray-900 transition-colors"
-      >
-        Sign Up
-      </button>
+    <button
+      type="submit"
+      class="Signup px-5 py-2 w-[12rem] sm:w-[14rem]
+            rounded-md bg-gray-800 text-gray-200 text-lg font-bold
+            hover:bg-gray-900 transition-colors"
+    >
+      Sign Up
+    </button>
 
-      <div
-        id="loading"
-        style="display: none;"
-        class="text-center mt-2 text-indigo-500 text-sm"
-      >
-        Creating your account...
-      </div>
+    <div
+      id="loading"
+      style="display: none;"
+      class="text-center mt-2 text-indigo-500 text-sm"
+    >
+      Creating your account...
+    </div>
 
-      <p class="already mt-2 text-sm text-black dark:text-gray-100">
-        Already have an account?
-        <a href="/login" class="alr text-[0.9rem] font-bold text-black underline dark:text-white">
-          Sign In
-        </a>
-      </p>
-    </form>
+    <p class="already mt-2 text-sm text-black dark:text-gray-100">
+      Already have an account?
+      <a href="/login" class="alr text-[0.9rem] font-bold text-black underline dark:text-white">
+        Sign In
+      </a>
+    </p>
+  </form>
   </div>
 
   <div
@@ -210,7 +216,7 @@
     signupForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      console.log('Form submitted'); // Debug log
+      console.log('Form submitted'); 
 
       clearError('error-message');
       clearError('success-message');
@@ -254,12 +260,12 @@
       if (signupBtn) signupBtn.disabled = true;
       loadingDiv.style.display = 'block';
 
-      console.log('Calling register function...'); // Debug log
+      console.log('Calling register function...'); 
 
       try {
         const result = await register(name, email, password);
         
-        console.log('Register result:', result); // Debug log
+        console.log('Register result:', result); 
 
         if (result.success) {
           displaySuccess('success-message', 'Account created successfully! Redirecting...');
@@ -279,7 +285,7 @@
           loadingDiv.style.display = 'none';
         }
       } catch (error) {
-        console.error('Caught error:', error); // Debug log
+        console.error('Caught error:', error); 
         displayError('error-message', 'An unexpected error occurred. Please try again.');
         if (signupBtn) signupBtn.disabled = false;
         loadingDiv.style.display = 'none';

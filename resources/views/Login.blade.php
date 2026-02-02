@@ -35,7 +35,6 @@
       <button class="about-btn">
         <a href="/about">ABOUT</a>
       </button>
-      <button class="switch-btn" onclick="switchMode()" id="switchID">SWITCH</button>
     </div>
 
 
@@ -50,8 +49,10 @@
     </div>
   </div>
       <div class="form-container">
-      <form class="form" id="loginForm">
-        <p class="text">Welcome Back !</p><br />
+      <form class="form" id="loginForm" >
+      <p class="mb-[1vh] text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
+        Welcome back!
+      </p>
         <div id="error-message" style="display: none; background-color: #fee; color: #c33; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #c33; font-size: 14px;"></div>
         <div id="success-message" style="display: none; background-color: #efe; color: #3c3; padding: 12px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #3c3; font-size: 14px;"></div>
         <label for="Username">E-mail Address</label> 

@@ -1,0 +1,84 @@
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+body.dark-mode .header {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: white;
+}
+
+
+body.dark-mode .bg-gray-900 {
+    background-color: #0a0a0a;
+}
+
+body.dark-mode .shadow-lg {
+    background-color: #2d2d2d;
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .text-black {
+    color: white !important;
+}
+
+body.dark-mode .login-btn {
+    background-color: #0f0f0f;
+    color: white;
+}
+body.dark-mode .sign-btn {
+    background-color: #171717df;
+    color: white;
+}
+
+body.dark-mode #cartDrawer {
+    background-color: #0f0f0f;
+    color:white;
+}
+
+body.dark-mode #links-drawer {
+    background-color: #0f0f0f;
+    color:white;
+}
+
+body.dark-mode .home-btn,
+body.dark-mode .tour-btn,
+body.dark-mode .rev-btn,
+body.dark-mode .about-btn {
+    color: white ;
+}
+
+
+.dark-mode-toggle {
+    background: none;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: white;
+}
