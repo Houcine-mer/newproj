@@ -68,12 +68,10 @@
         <div><a href="/">Home</a></div>
         <div><a href="/cars">Cars List</a></div>
         <div><a href="/tour">Tour</a></div>
-        <div id ="ModeDiv">
-          <button onclick="switchMode()" id="switchIDV">Dark Mode</button>
-        </div>
+<div id="switchIDV">Dark Mode</div>
       </div>
     </div>  
-
+<main>
     <div class="mid" >
       <div class="image">
         <img src="images/image.png" alt="About us image" class="about-image">
@@ -129,6 +127,7 @@
             <a href="#" class="privacy-link hover:underline">Privacy Policy</a>
           </p>
         </div>
+</main>
       <div id="cartDrawer">
   <div class="cart-header">
     <h3>Orders</h3>

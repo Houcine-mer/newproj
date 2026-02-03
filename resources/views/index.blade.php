@@ -73,11 +73,11 @@
         <div><a href="/tour">Tour</a></div>
         <div><a href="/reviews">Reviews</a></div>
         <div><a href="/about">About</a></div>
-        <div id ="ModeDiv">
-          <button onclick="switchMode()" id="switchIDV">Dark Mode</button>
-        </div>
+        <div id="switchIDV">Dark Mode</div>
       </div>
-    </div>      
+    </div> 
+    
+<main>
     <div class="image-container">  
       <img src="images/upcoming-trends-in-the-world-of-car-dealerships.jpeg" alt="AutoDz" class="object-cover h-100 w-full md:h-[40vh] lg:h-[60vh]  opacity=80">
       <div class="absolute text-white font-bold text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-['Poppins'] top-[12vh] left-[6vw]">
@@ -215,6 +215,7 @@
         <a href="#" class="privacy-link hover:underline">Privacy Policy</a>
       </p>
     </div>
+</main>
     <div class="dropdown" id="dropdownMenu">
       <button id="logoutBtn"class="dropdownbtn">Logout</button>
     </div>

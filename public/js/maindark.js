@@ -1,33 +1,30 @@
-const currentTheme = localStorage.getItem("theme");
-console.log(currentTheme);
 const Modebtn = document.getElementById("switchIDV");
-const ModeDiv = document.getElementById("ModeDiv");
 
+function applyTheme(theme) {
+    if (theme === "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("cartIcon-id")?.classList.add("dark");
+        Modebtn.textContent = "Light Mode";
+        updateCartIcon();
+    } else {
+        document.body.classList.remove("dark");
+        document.getElementById("cartIcon-id")?.classList.remove("dark");
+        Modebtn.textContent = "Dark Mode";
+    }
+}
+
+// Load theme on page load
 document.addEventListener("DOMContentLoaded", () => {
-    if (currentTheme === "dark") {
-        Modebtn.innerHTML = "";
-        Modebtn.textContent = "Light Mode";
-    }
-    if (currentTheme === "Light") {
-        Modebtn.innerHTML = "";
-        Modebtn.textContent = "Dark Mode";
-    }
+    const theme = localStorage.getItem("theme") || "light";
+    applyTheme(theme);
 });
-ModeDiv.addEventListener("click", () => {
-    const mode = localStorage.getItem("theme");
-    if (mode === "dark") {
-        mode = "Light";
-    }
-    if (mode === "Light") {
-        mode = "Dark";
-    }
-    if (currentTheme === "dark") {
-        Modebtn.innerHTML = "";
-        Modebtn.textContent = "Light Mode";
-    }
-    if (currentTheme === "Light") {
-        Modebtn.innerHTML = "";
-        Modebtn.textContent = "Dark Mode";
-    }
-    localStorage.setItem("theme", mode);
+
+// Toggle on click
+Modebtn.addEventListener("click", () => {
+    const currentTheme = localStorage.getItem("theme") || "light";
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    localStorage.setItem("theme", newTheme);
+    applyTheme(newTheme);
+    updateCartIcon();
 });
