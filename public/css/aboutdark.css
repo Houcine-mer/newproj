@@ -10,6 +10,10 @@ body.dark .mid {
     background-color: #1a1a1a;
     color: white;
 }
+body.dark #links-drawer {
+    background-color: rgb(21, 20, 20);
+    color: white;
+}
 
 body.dark #line {
     color: #111827;

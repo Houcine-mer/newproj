@@ -138,7 +138,7 @@ input:focus {
 }
 
 .tour-grid {
-    display: grid;
+    display: grid !important;
 
     /* Columns take card width, wrap automatically */
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
@@ -287,8 +287,5 @@ input:focus {
     margin: 20px;
   }
 
-  .tour-grid {
-    grid-template-columns: 1fr;
-  }
 }
 

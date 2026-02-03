@@ -22,22 +22,7 @@ const menu3 = document.getElementById('menu3');
 
 }
 
-function switchMode() {
-document.body.classList.toggle("dark");
-document.getElementById("cartIcon-id").classList.toggle("dark");
-if(document.getElementById("cartIcon-id").classList.contains("dark")){
-  document.getElementById("switchID").innerHTML="";
-  document.getElementById("switchID").innerHTML="Light Mode";
-}
-else{
-  document.getElementById("switchID").innerHTML="";
-  document.getElementById("switchID").innerHTML="Dark Mode";
-}
-updateCartIcon();
 
-
-  
-}
 
 function closeAll(){
     document.body.classList.remove("nav");
@@ -139,6 +124,7 @@ function toggleModel() {
     menu2.classList.remove('second-hidden');
     menu2.classList.add('second-active');
   }, 300);
+  loadBrandsIntoSecondPhase();
 }
 
 

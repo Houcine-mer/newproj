@@ -10,6 +10,10 @@ body.dark {
     background-color: #1a1a1a;
     color: white;
 }
+body.dark #links-drawer {
+    background-color: rgb(21, 20, 20);
+    color: white;
+}
 
 body.dark main h1,
 body.dark main h2,
@@ -49,4 +53,15 @@ body.dark .tour-btn,
 body.dark .rev-btn,
 body.dark .about-btn {
     color: white;
+}
+
+
+
+body.dark #cartDrawer h1,
+body.dark #cartDrawer h2,
+body.dark #cartDrawer h3,
+body.dark #cartDrawer h4,
+body.dark #cartDrawer h5,
+body.dark #cartDrawer p {
+    color: #000;
 }

@@ -153,6 +153,7 @@
     <div><a href="/cars">Cars List</a></div>
     <div><a href="/reviews">Reviews</a></div>
     <div><a href="/about">About</a></div>
+    <div onclick="switchMode()" id="switchID">Dark Mode</div>
   </div>
 </div>
   <script src="{{ asset('js/globalTour.js') }}"></script>

@@ -124,7 +124,7 @@ async function createCar(carData) {
     }
 
     const createdCar = await response.json(); 
-    alert(`Car : "${createCar.name}" created successfully`);  
+    alert(`Car : "${createdCar.name}" created successfully`);  
     return createdCar;
   } catch (error) {
     console.error('Error creating car:', error);
