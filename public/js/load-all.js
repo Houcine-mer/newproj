@@ -26,7 +26,7 @@ async function loadRentOrders(userId) {
           <p class="rent-dates">${formatDate(order.pivot.start_date)} – ${formatEndDate(order.pivot.start_date, order.pivot.number_of_days)}</p>
           
           <div class="rent-bottom">
-          <span class="rent-price">total price: $${order.pivot.total_price}</span>
+          <span class="rent-price">total price: DZD${order.pivot.total_price}</span>
           
                 <button class="remove-btn-kk" 
                     data-user-id="${userId}" 

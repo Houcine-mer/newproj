@@ -40,7 +40,7 @@ async function loadRentOrders(userId) {
           <p class="rent-dates">${formatDate(order.pivot.start_date)} – ${formatEndDate(order.pivot.start_date, order.pivot.number_of_days)}</p>
           
           <div class="rent-bottom">
-          <span class="rent-price">total price: $${order.pivot.total_price}</span>
+          <span class="rent-price">total price: ${order.pivot.total_price}</span>
           
                 <button class="update-btn-kk" 
                     data-user-id="${userId}" 
@@ -118,7 +118,7 @@ document.addEventListener("click", (e) => {
   document.getElementById("rent-modal").classList.add("show");
   const daysInput = document.getElementById("rent-days");
   daysInput.value = 1;
-  document.getElementById("rent-total-price").value = `$${selectedRentPrice.toFixed(2)}`;
+  document.getElementById("rent-total-price").value = `DZD${selectedRentPrice.toFixed(2)}`;
 });
 document.getElementById("close-rent-modal").addEventListener("click", () => {
   document.getElementById("rent-modal").classList.remove("show");
@@ -127,7 +127,7 @@ document.getElementById("close-rent-modal").addEventListener("click", () => {
 document.getElementById("rent-days").addEventListener("input", (e) => {
   let days = parseInt(e.target.value) || 1;
   let total = selectedRentPrice * days;
-  document.getElementById("rent-total-price").value = `$${total.toFixed(2)}`;
+  document.getElementById("rent-total-price").value = `DZD${total.toFixed(2)}`;
 });
 
 
@@ -198,7 +198,7 @@ document.addEventListener("click", e => {
 
   const daysInput = document.getElementById("update-rent-order-days");
   daysInput.value = 1; 
-  document.getElementById("update-rent-order-total").value = `$${updateRentOrderPrice.toFixed(2)}`;
+  document.getElementById("update-rent-order-total").value = `DZD${updateRentOrderPrice.toFixed(2)}`;
 
 
   const startDateInput = document.getElementById("update-rent-order-start-date");
@@ -208,7 +208,7 @@ document.addEventListener("click", e => {
 document.getElementById("update-rent-order-days").addEventListener("input", e => {
   const days = parseInt(e.target.value) || 1;
   const total = updateRentOrderPrice * days;
-  document.getElementById("update-rent-order-total").value = `$${total.toFixed(2)}`;
+  document.getElementById("update-rent-order-total").value = `DZD${total.toFixed(2)}`;
 });
 
 document.getElementById("update-rent-order-form").addEventListener("submit", async e => {

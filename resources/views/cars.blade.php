@@ -5,7 +5,10 @@
 <link rel="stylesheet" href="{{ asset('css/allStyle.css') }}">
 <link rel="stylesheet" href="{{ asset('css/carsForms.css') }}">
     <link rel="preload" as="image" href="/images/mercedes-black-raobpqc23szwxs7d.jpg">
+    <link rel="preload" as="image" href="/images/dodge-bg.jpeg">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="images/simple-car-silhouette-sticker-u33a0-x450 5.png">
+    <title>AutoDz Cars List | Find Your Car</title>
   </head>
   <body>
     <div class="header" id="headID">
@@ -73,32 +76,13 @@
                 <div>Models</div>
                 <p>></p>
               </button>
-              <button onclick="switchMode()" id="switchID">Dark Mode</button>
+              <button  id="switchIDV">Dark Mode</button>
             </div>
           </ul>
 
           <ul class="second-hidden" id="menu2">
             <div class="second-phase" id="brandloadphase">
-              <button onclick="showCarList('Mercedes-benz'); showMenu3()">
-                <div>Mercedes-Benz</div>
-                <p>></p>
-              </button>
-              <button onclick="showCarList('Audi'); showMenu3()">
-                <div> audi </div>
-                <p >></p>
-              </button>
-              <button onclick="showCarList('Toyota'); showMenu3()">
-                <div >Toyota</div>
-                <p >></p>
-              </button>
-              <button onclick="showCarList('BMW'); showMenu3()">
-                <div>BMW</div>
-                <p>></p>
-              </button>
-              <button onclick="showCarList('Volkswagen'); showMenu3()">
-                <div>Volkswagen</div>
-                <p>></p>
-              </button>
+              
             </div>
           </ul >
 
@@ -260,12 +244,14 @@
   </div>
 </div>
 
+
 <script src="{{ asset('js/globalTour.js') }}"></script>
 <script src="{{ asset('js/CarsList.js') }}"></script>
 <script src="{{ asset('js/carsfetch.js') }}"></script>
 <script src="{{ asset('js/rent.js') }}"></script>
 <script src="{{ asset('js/auth.js') }}"></script>
 <script src="{{ asset('js/fetchbrand.js') }}"></script>
+<script src="{{ asset('js/maindark.js') }}"></script>
   </body>
 
   

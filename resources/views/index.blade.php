@@ -13,6 +13,8 @@
     <link href="{{ asset('css/headerStyle.css') }}" rel="stylesheet">
     <link href="{{ asset('css/maindarkmode.css') }}" rel="stylesheet">
     <link href="{{ asset('css/maingrid.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mainRent.css') }}" rel="stylesheet">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
   </head>
   <body>
@@ -94,48 +96,48 @@
       <div class="car-card">
         <img style="margin-top: 3vh; margin-bottom:1vh ;margin-left: 9px;border-radius:10%" src="/images/GlaSuv.jpg" alt="bmw x5" title="bmw x5" width="95%" height="40%">
         <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES GLA SUV</h3>
-        <h2 id="price1" class="text-2xl lg:text-lg" style="margin-top: 0;">$70000</h2>
-        <p style="margin-top: 0;">or $89/day</p>
+        <h2 id="price1" class="text-2xl lg:text-lg" style="margin-top: 0;">15000000 DZD</h2>
+        <p style="margin-top: 0;">70000/day</p>
         <br />
         <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
           <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
-          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300 main-rent-btn" data-id="1" data-rent-price="70000">Rent</a>
         </div>
       </div>
     
       <div class="car-card">
         <img class="mx-auto" style=" margin-top: 1vh; margin-bottom:1vh ;border-radius:10%" src="/images/rs6-pic.avif" alt="tesla" title="tesla" width="95%" height="40%">
         <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']"  style="margin-top: 0;">AUDI RS6</h3>
-        <h2 id="price2" class="text-2xl lg:text-lg" style="margin-top: 0;">$120000</h2>
-        <p style="margin-top: 0;">or $89/day</p>
+        <h2 id="price2" class="text-2xl lg:text-lg" style="margin-top: 0;">22000000 DZD</h2>
+        <p style="margin-top: 0;">90000/day</p>
         <br />
         <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
           <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
-          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300 main-rent-btn" data-id="2" data-rent-price="90000">Rent</a>
         </div>
       </div>
     
       <div class="car-card">
         <img style="margin-top: 1vh; margin-bottom:1vh ;margin-left: 9px;border-radius:10%" src="/images/G-Class.jpg" alt="bmw x5" title="bmw x5" width="95%" height="40%">
         <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES G-CLASS</h3>
-        <h2 id="price3" class="text-2xl lg:text-lg" style="margin-top: 0;">$150000</h2>
-        <p style="margin-top: 0;">or $69/day</p>
+        <h2 id="price3" class="text-2xl lg:text-lg" style="margin-top: 0;">40000000 DZD</h2>
+        <p style="margin-top: 0;">150000/day</p>
         <br />
         <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
           <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
-          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300 main-rent-btn"  data-id="3" data-rent-price="150000">Rent</a>
         </div>
       </div>
     
       <div class="car-card">
         <img class="mx-auto" style="margin-top: 1vh; margin-bottom:1vh" src="/images/mercedes-benz-e-class-black.avif" alt="mercedes" title="mercedes" width="95%" height="50%">
         <h3 class="text-center text-xl sm:text-2xl lg:text-xl font-bold font-['Poppins']" style="margin-top: 0;">MERCEDES E-CLASS</h3>
-        <h2 id="price4" class="text-2xl lg:text-lg" style="margin-top: 0;">$120000</h2>
-        <p style="margin-top: 0; margin-bottom: 3vh">or $79/day</p>
+        <h2 id="price4" class="text-2xl lg:text-lg" style="margin-top: 0;">18000000 DZD</h2>
+        <p style="margin-top: 0; margin-bottom: 3vh">80000/day</p>
         <br />
         <div class="flex justify-center gap-[4vw] xl:gap-[4vw]">
           <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem] font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Buy</a>
-          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300">Rent</a>
+          <a class="bg-gray-900 px-[8vw] lg:px-[5vw] py-[0.6vh] text-white text-[1rem] sm:text-[1.25rem] lg:text-[1rem]  font-bold font['Poppins'] rounded-md hover:bg-gray-950 transition duration-300 main-rent-btn"  data-id="4" data-rent-price="80000">Rent</a>
         </div>
       </div>
     </div>
@@ -219,11 +221,27 @@
     <div class="dropdown" id="dropdownMenu">
       <button id="logoutBtn"class="dropdownbtn">Logout</button>
     </div>
+
+<div id="rent-modal">
+  <div>
+    <h2>Rent a Car</h2>
+    <form id="rent-form">
+      <label>Start Date: <input type="date" id="rent-start-date" required></label>
+      <label>Number of Days: <input type="number" id="rent-days" min="1" required></label>
+      <label>Total Price: <input type="text" id="rent-total-price" readonly value="$0"></label>
+      <div>
+        <button type="submit">Submit</button>
+        <button type="button" id="close-rent-modal">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
     
     <script src="{{ asset('js/auth.js') }}"></script>
     <script src="{{ asset('js/headerScript.js') }}"></script>
     <script src="{{ asset('js/load-all.js') }}"></script>
     <script src="{{ asset('js/usrly.js') }}"></script>
     <script src="{{ asset('js/maindark.js') }}"></script>
+    <script src="{{ asset('js/mainRent.js') }}"></script>
   </body>
 </html>

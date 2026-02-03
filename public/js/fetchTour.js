@@ -44,7 +44,7 @@ async function loadTourOrders(userId) {
           <p class="rent-dates">${order.pivot.number_of_hours} hours</p>
           
           <div class="rent-bottom">
-          <span class="rent-price">total price: $${order.pivot.total_price}</span>
+          <span class="rent-price">total price: DZD${order.pivot.total_price}</span>
           
                 <button class="update-btn-kk-t" 
                     data-user-id="${userId}" 
