@@ -86,7 +86,7 @@
     </div> 
     <div class="flex justify-center sm:mt-[5vh] sm:mb-[5vh] md:mb-0 lg:mt-[9vh] lg:mb-[9vh]">
       <h1 class="mt-[4vh] mb-[3vh] sm:mb-[6vh] md:mb-0 lg:mb-[5vh] text-[2rem] sm:text-[3rem] lg:text-[3.25rem] text-center font-bold font-['Poppins'] text-3xl text-black opacity-80">Featured Cars
-      <p class="text-black  mt-[2vh] ml-[4vw] mr-[4vw] text-[1.25rem] sm:text-[1.5rem] xl-text-[2rem] font-bold text-center font-['Roboto'] align-left">Discover Our handpicked selection of premium vehicles available for purshase or rental </p>
+      <p class="text-black  mt-[2vh] ml-[4vw] mr-[4vw] text-[1.25rem] sm:text-[1.5rem] xl-text-[2rem] font-bold text-center font-['Roboto'] align-left">Discover Our handpicked selection of premium vehicles available for purchase or rental </p>
       </h1>
     </div>
 
