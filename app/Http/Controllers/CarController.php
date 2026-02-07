@@ -42,6 +42,7 @@ class CarController extends Controller
 
         return response()->json([
             'message' => 'Car created',
+            'data' => $newCar,
         ]);
     }
     function updateCar(Request $request){
